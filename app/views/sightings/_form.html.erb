@@ -17,6 +17,10 @@
 
 
 <div id='map'></div>
+
+
+
+
   <div class="field">
     <%= form.label :latitude %>
     <%= form.text_field :latitude %>
@@ -26,14 +30,21 @@
     <%= form.label :longitude %>
     <%= form.text_field :longitude %>
   </div>
+<div class="field">
+<%= form.label :when_sighted %>
+<%= datetime_local_field(:sighting, :sighted_at) %>
+</div>
+
+  <div>
+    <%= form.label :picture %>
+    <%= form.file_field :picture %>
+  </div>
+ 
 
   <div class="field">
     <%= form.label :notes %>
     <%= form.text_area :notes %>
   </div>
-
-
-
   <div class="actions">
     <%= form.submit %>
   </div>

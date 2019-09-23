@@ -14,5 +14,18 @@
  *= require_self
  */
 
-#map { height: 50vh; width: 60vw; 
+#map { height: 50vh; width: 90vw;
+       margin-bottom: 1em;
      }
+
+img.sighting { max-width: 90vw;
+	       max-height: 50vh;
+	     }
+
+th, td { border: 1px solid #333;
+	 padding: .5em;
+      }
+table { cellspacing: 0;
+	cellpadding: 0;
+	margin-top: 1em;
+      }

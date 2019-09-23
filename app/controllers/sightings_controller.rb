@@ -5,6 +5,11 @@ class SightingsController < ApplicationController
   # GET /sightings.json
   def index
     @sightings = Sighting.all
+    @hash = Gmaps4rails.build_markers(@sightings) do |sighting, marker|
+      marker.lat sighting.latitude.to_f
+      marker.lng sighting.longitude.to_f
+      marker.infowindow "<img src='#{sighting.picture.url(:thumb)}'><br /><a href='/sightings/#{sighting.id}'>#{sighting.animal_name}<br />#{sighting.sighted_at.strftime('%b/%e') if sighting.sighted_at}</a>"
+    end
   end
 
   # GET /sightings/1
@@ -69,6 +74,6 @@ class SightingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sighting_params
-      params.require(:sighting).permit(:animal_id, :latitude, :longitude, :notes)
+      params.require(:sighting).permit(:animal_id, :latitude, :longitude, :notes, :sighted_at, :picture)
     end
 end

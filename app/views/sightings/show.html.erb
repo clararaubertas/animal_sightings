@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
+
+
+
 <div id='map'></div>
+
+<%= image_tag(@sighting.picture.url, class: 'sighting') if @sighting.picture? %>
 <p>
   <strong>Animal:</strong>
-  <%= @sighting.animal_id %>
+  <%= @sighting.animal_name %>
 </p>
 
 <p>
@@ -16,9 +21,17 @@
 </p>
 
 <p>
+  <strong>When sighted:</strong>
+  <%= time_ago_in_words(@sighting.sighted_at) if @sighting.sighted_at %>
+</p>
+
+<p>
   <strong>Notes:</strong>
   <%= @sighting.notes %>
 </p>
+
+<input type='hidden' id='sighting_latitude' value='<%= @sighting.latitude %>' >
+<input type='hidden' id='sighting_longitude' value='<%= @sighting.longitude %>' >
 
 <%= link_to 'Edit', edit_sighting_path(@sighting) %> |
 <%= link_to 'Back', sightings_path %>
