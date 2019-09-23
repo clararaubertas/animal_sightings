@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  animal_id: 1
+  latitude: 1.5
+  longitude: 1.5
+  notes: MyText
+
+two:
+  animal_id: 1
+  latitude: 1.5
+  longitude: 1.5
+  notes: MyText
