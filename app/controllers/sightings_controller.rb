@@ -8,7 +8,7 @@ class SightingsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@sightings) do |sighting, marker|
       marker.lat sighting.latitude.to_f
       marker.lng sighting.longitude.to_f
-      marker.infowindow "<img src='#{sighting.picture.url(:thumb)}'><br /><a href='/sightings/#{sighting.id}'>#{sighting.animal_name}<br />#{sighting.sighted_at.strftime('%b/%e') if sighting.sighted_at}</a>"
+      marker.infowindow "<img src='#{sighting.picture.url(:thumb)}'><br /><a href='/sightings/#{sighting.id}'>#{sighting.animal_name}<br />#{sighting.sighted_at.strftime('%b %e') if sighting.sighted_at}</a>"
     end
   end
 
