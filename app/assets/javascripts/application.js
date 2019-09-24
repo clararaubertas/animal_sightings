@@ -19,6 +19,8 @@ function gmap_form() {
     handler = Gmaps.build('Google');    // map init
     handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 	if (typeof(sightings) !== 'undefined')  {
+	    handler.map.centerOn([41.8026, -87.5986]);
+	    handler.getMap().setZoom(15);
 	    markers = handler.addMarkers(sightings);
 	    handler.bounds.extendWith(markers);
 	    handler.fitMapToBounds();
