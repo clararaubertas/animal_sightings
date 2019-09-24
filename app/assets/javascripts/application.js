@@ -23,7 +23,7 @@ function gmap_form() {
 	    markers = handler.addMarkers(sightings);
 	    handler.bounds.extendWith(markers);
 	    handler.fitMapToBounds();
-	    if (sightings.length == 1) {
+	    if (sightings.length < 2) {
 		handler.getMap().setZoom(15);
 	    }
 	    
