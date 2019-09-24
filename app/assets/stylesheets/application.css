@@ -14,16 +14,71 @@
  *= require_self
  */
 
-#map { height: 50vh; width: 90vw;
+
+/* CSS - Cascading Style Sheet */
+/* Palette color codes */
+/* Palette URL: http://paletton.com/#uid=12m0u0kllllaFw0g0qFqFg0w0aF */
+
+/* Feel free to copy&paste color codes to your application */
+
+
+/* As hex codes */
+
+.color-primary-0 { color: #7B9F35 }	/* Main Primary color */
+.color-primary-1 { color: #D4EE9F }
+.color-primary-2 { color: #A5C663 }
+.color-primary-3 { color: #567714 }
+.color-primary-4 { color: #354F00 }
+
+
+
+/* As RGBa codes */
+
+.rgba-primary-0 { color: rgba(123,159, 53,1) }	/* Main Primary color */
+.rgba-primary-1 { color: rgba(212,238,159,1) }
+.rgba-primary-2 { color: rgba(165,198, 99,1) }
+.rgba-primary-3 { color: rgba( 86,119, 20,1) }
+.rgba-primary-4 { color: rgba( 53, 79,  0,1) }
+
+#container { max-width: 1200px; background: #d4ee9f;
+	     border-radius: 20px;
+	     padding: 2em;
+	     margin: auto;
+	   }
+
+h1, h2 { color: #354f00; 
+       }
+
+input[type='submit'], a { color: #fff; background: #567714; border-radius: 5px; padding: 10px;
+    text-decoration: none; font-weight: bold;
+    text-transform: lowercase;
+    border: none;
+    font-size: 1.2em;
+    font-family: 'Neucha', sans-serif;
+  }
+h1 a { color: #354f00; text-decoration: none; background: transparent;
+       font-size: 2em;
+       font-family: Satisfy;
+       text-decoration: underline;
+     }
+body { background: url('/assets/animalpattern.jpg'); font-family: 'Neucha', sans-serif;
+     }
+th, td { background: #fff;
+     border-radius: 5px;
+      }
+h1 { text-transform: lowercase; 
+   }
+
+#map { height: 50vh; width: 95%;
        margin-bottom: 1em;
      }
 
-img.sighting { max-width: 90vw;
+img.sighting { max-width: 90%;
 	       max-height: 50vh;
 	     }
 
 th, td { border: 1px solid #333;
-	 padding: .5em;
+	 padding: 10px;
       }
 table { cellspacing: 0;
 	cellpadding: 0;
