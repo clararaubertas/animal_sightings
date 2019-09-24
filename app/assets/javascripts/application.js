@@ -20,10 +20,13 @@ function gmap_form() {
     handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 	if (typeof(sightings) !== 'undefined')  {
 	    handler.map.centerOn([41.8026, -87.5986]);
-	    handler.getMap().setZoom(15);
 	    markers = handler.addMarkers(sightings);
 	    handler.bounds.extendWith(markers);
 	    handler.fitMapToBounds();
+	    if (sightings.length == 1) {
+		handler.getMap().setZoom(15);
+	    }
+	    
 	}
  	else if (($('#sighting_longitude').val() !=''))
 	{
