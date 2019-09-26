@@ -49,7 +49,10 @@
 h1, h2 { color: #354f00; 
        }
 
-input[type='submit'], a { color: #fff; background: #567714; border-radius: 5px; padding: 10px;
+a { color: #567714; 
+  }
+
+input[type='submit'], .new a { color: #fff; background: #567714; border-radius: 5px; padding: 10px;
     text-decoration: none; font-weight: bold;
     text-transform: lowercase;
     border: none;
