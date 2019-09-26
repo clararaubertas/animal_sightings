@@ -22,7 +22,7 @@
 
 <p>
   <strong>When sighted:</strong>
-  <%= time_ago_in_words(@sighting.sighted_at) + ' ago' if @sighting.sighted_at %>
+  <%= time_ago_in_words(Time.zone.local_to_utc(@sighting.sighted_at)) + ' ago' if @sighting.sighted_at %>
 </p>
 
 <p>

@@ -28,7 +28,11 @@
         <td><%= sighting.animal_name %></td>
         <td><%= sighting.latitude %></td>
         <td><%= sighting.longitude %></td>
-        <td><%= time_ago_in_words(sighting.sighted_at) if sighting.sighted_at %></td>
+        <td>
+  <%= time_ago_in_words(Time.zone.local_to_utc(@sighting.sighted_at)) + ' ago' if @sighting.sighted_at %>
+
+
+</td>
         <td><%= sighting.notes %></td>
         <td><%= link_to 'Show', sighting %></td>
         <td><%= link_to 'Edit', edit_sighting_path(sighting) %></td>
