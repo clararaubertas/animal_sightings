@@ -29,7 +29,7 @@
         <td><%= sighting.latitude %></td>
         <td><%= sighting.longitude %></td>
         <td>
-  <%= time_ago_in_words(Time.zone.local_to_utc(@sighting.sighted_at)) + ' ago' if @sighting.sighted_at %>
+  <%= time_ago_in_words(Time.zone.local_to_utc(sighting.sighted_at)) + ' ago' if sighting.sighted_at %>
 
 
 </td>
