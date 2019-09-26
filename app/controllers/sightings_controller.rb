@@ -9,6 +9,11 @@ class SightingsController < ApplicationController
       marker.lat sighting.latitude.to_f
       marker.lng sighting.longitude.to_f
       marker.infowindow "<img src='#{sighting.picture.url(:thumb)}'><br /><a href='/sightings/#{sighting.id}'>#{sighting.animal_name}<br />#{sighting.sighted_at.strftime('%b %e') if sighting.sighted_at}</a>"
+      marker.picture({
+                            :url => "/assets/#{sighting.animal_name}.png",
+                            :width => 24,
+                            :height => 24
+                            })
     end
   end
 

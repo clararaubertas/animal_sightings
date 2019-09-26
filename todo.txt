@@ -1,0 +1,3 @@
+* change map markers to pictures of animals
+* fix time zones
+* infobox formatting looks weird
