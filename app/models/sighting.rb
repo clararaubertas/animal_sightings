@@ -7,6 +7,7 @@ class Sighting < ApplicationRecord
   delegate :name, to: :animal, prefix: true, allow_nil: true
 
   mount_uploader :picture, PictureUploader
+  default_scope { where(archived: false) }
 
   
 end
