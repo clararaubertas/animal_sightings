@@ -74,3 +74,4 @@ end
 
 gem 'capistrano'
 gem 'ed25519'
+gem 'bcrypt_pbkdf'
