@@ -5,6 +5,7 @@ set :application, "animal_sightings"
 set :repo_url, "git@github.com:clararaubertas/animal_sightings.git"
 
 # Default branch is :master
+se :branch, 'main'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
