@@ -73,3 +73,4 @@ group :production do
 end
 
 gem 'capistrano'
+gem 'ed25519'
