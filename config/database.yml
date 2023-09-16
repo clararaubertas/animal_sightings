@@ -23,3 +23,13 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+
+staging:                                                                      
+  adapter: mysql2
+  database: animals
+  username: root
+  password: development
+
+
+
+
